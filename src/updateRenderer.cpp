@@ -9,7 +9,8 @@ void updateRenderer(std::vector<textures> &vecTextures, SDL_Renderer* &renderer)
   SDL_RenderCopy(renderer, vecTextures[3].texture, NULL, vecTextures[3].rect);
   if (dir == Left) {
     SDL_RenderCopy(renderer, vecTextures[4].texture, NULL, vecTextures[4].rect);
-  }else
+  }else {
     SDL_RenderCopy(renderer, vecTextures[5].texture, NULL, vecTextures[4].rect);
+  }
   SDL_RenderPresent(renderer);
 }

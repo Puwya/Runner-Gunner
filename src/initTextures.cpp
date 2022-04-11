@@ -3,7 +3,8 @@
 void initTextures(std::vector<textures> &vecTextures, SDL_Renderer* &renderer) {
   // This loop iterates through the amount of textures program needs
   for (int i = 0; i < 6; i++) {
-    // Creating C String on the heap and declaring size to be current texture string size
+    // Creating C String on the heap and declaring size to be current texture 
+    // string size
     char* cstr = new char [texture_load[i].length()+1];
     // Using string copy to copy current string into a char *
     strcpy(cstr, texture_load[i].c_str());

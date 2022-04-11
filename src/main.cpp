@@ -1,8 +1,8 @@
 #include "../include/header.h"
 
-std::string texture_load[6] {"../assets/BackGround.bmp", "../assets/clouds.bmp", "../assets/clouds1.bmp",
-                             "../assets/sky.bmp", "../assets/spriteL.bmp", 
-                             "../assets/spriteR.bmp"};
+std::string texture_load[6] {"../assets/BackGround.bmp", "../assets/clouds.bmp", 
+                             "../assets/clouds1.bmp", "../assets/sky.bmp", 
+                             "../assets/spriteL.bmp", "../assets/spriteR.bmp"};
 Dir dir = Right;
 
 int main(int argc, char* argv[]) {
