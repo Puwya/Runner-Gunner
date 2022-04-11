@@ -1,3 +1,0 @@
-/Users/Dev/Cpp/Projects/RunnerShooter/build/CMakeFiles/main.dir
-/Users/Dev/Cpp/Projects/RunnerShooter/build/CMakeFiles/edit_cache.dir
-/Users/Dev/Cpp/Projects/RunnerShooter/build/CMakeFiles/rebuild_cache.dir
