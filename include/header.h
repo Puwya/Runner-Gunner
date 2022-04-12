@@ -7,7 +7,7 @@
 #include <string>
 // SDL 2 Library & Dependencies
 #include <SDL.h>
-#include "glad.h"
+#include "libs/glad.h"
 
 struct textures {
   std::string texture_name;

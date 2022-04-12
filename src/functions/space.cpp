@@ -5,8 +5,11 @@ void space(std::vector<textures> &vecTextures, SDL_Renderer* &renderer) {
     vecTextures[4].rect->y--;
     updateRenderer(vecTextures, renderer);
   } 
-  for (int i = 0; i < 24; i++) {
-    vecTextures[4].rect->y += 2;
+  for (int i = 0; i < 16; i++) {
+    for (int j = 0; j < 3; j++) {
+      vecTextures[4].rect->y++;
+      updateRenderer(vecTextures, renderer);
+    }
     updateRenderer(vecTextures, renderer);
   }
 }
