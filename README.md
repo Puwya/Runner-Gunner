@@ -7,6 +7,7 @@ Game in development
 ## How to install
 ---
 
+**MAKE SURE YOU HAVE SDL INSTALLED!**
 
 >1. Clone Repo
 >
