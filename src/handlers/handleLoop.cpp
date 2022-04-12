@@ -1,4 +1,4 @@
-#include "../include/header.h"
+#include "../../include/header.h"
 
 void gameLoop(std::vector<textures> &vecTextures, SDL_Renderer* &renderer) {
   bool gameOver = false;

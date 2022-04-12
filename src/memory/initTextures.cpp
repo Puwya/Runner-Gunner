@@ -1,4 +1,4 @@
-#include "../include/header.h"
+#include "../../include/header.h"
 
 void initTextures(std::vector<textures> &vecTextures, SDL_Renderer* &renderer) {
   // This loop iterates through the amount of textures program needs

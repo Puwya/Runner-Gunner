@@ -1,4 +1,4 @@
-#include "../include/header.h"
+#include "../../include/header.h"
 
 bool initSDL(SDL_Window* &window, SDL_Renderer* &renderer) {
   if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) == 0) {

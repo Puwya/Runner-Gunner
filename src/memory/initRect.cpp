@@ -1,4 +1,4 @@
-#include "../include/header.h"
+#include "../../include/header.h"
 
 void initRect(std::vector<textures> &vecTextures) {
   vecTextures[0].rect = new SDL_Rect {0, 0, 640, 480};

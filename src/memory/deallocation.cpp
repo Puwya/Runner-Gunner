@@ -1,4 +1,4 @@
-#include "../include/header.h"
+#include "../../include/header.h"
 
 void deallocation(bool initialized, SDL_Window* &window, SDL_Renderer* &renderer) {
   if (initialized) {

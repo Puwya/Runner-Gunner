@@ -1,4 +1,4 @@
-#include "../include/header.h"
+#include "../../include/header.h"
 
 void handleEvent(const SDL_Event &event, bool &gameOver, SDL_Renderer* &renderer, 
                  std::vector<textures> &vecTextures) {
@@ -46,27 +46,27 @@ void handleEvent(const SDL_Event &event, bool &gameOver, SDL_Renderer* &renderer
       updateRenderer(vecTextures, renderer);
     }
   }else if (event.key.keysym.sym == SDLK_RIGHT && event.type == SDL_KEYDOWN) {
+    dir = Right;
+    updateRenderer(vecTextures, renderer);
     if (vecTextures[4].rect->x <= 575) {
       for (int i = 0; i < 12; i++){
         vecTextures[4].rect->x++;
+        if (vecTextures[4].rect->x > 610)
+          vecTextures[4].rect->x = 610;
         updateRenderer(vecTextures, renderer);
       }
     }
-    if (vecTextures[4].rect->x > 575)
-      vecTextures[4].rect->x = 575;
-    dir = Right;
-    updateRenderer(vecTextures, renderer);
   }else if (event.key.keysym.sym == SDLK_LEFT && event.type == SDL_KEYDOWN) {
+    dir = Left;
+    updateRenderer(vecTextures, renderer);
     if (vecTextures[4].rect->x >= 0) {
       for (int i = 0; i < 12; i++){
         vecTextures[4].rect->x--;
+        if (vecTextures[4].rect->x < 0)
+          vecTextures[4].rect->x = 0;
         updateRenderer(vecTextures, renderer);
       }
     }
-    if (vecTextures[4].rect->x < 0)
-      vecTextures[4].rect->x = 0;
-    dir = Left;
-    updateRenderer(vecTextures, renderer);
   }else if (event.key.keysym.sym == SDLK_SPACE && event.type == SDL_KEYDOWN) {
     for (int i = 0; i < 48; i++) {
       vecTextures[4].rect->y--;
