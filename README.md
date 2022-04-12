@@ -5,7 +5,6 @@ Game in development
 *I can only work on it when I have free time from school*
 
 ## How to install
----
 
 **MAKE SURE YOU HAVE SDL INSTALLED!**
 
