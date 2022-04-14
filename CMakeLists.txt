@@ -4,6 +4,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_BUILD_TYPE Debug)
 
 find_package(SDL2 REQUIRED)
+# Going to add SDL2 source files in here still haven't figured it out
 include_directories(${SDL2_INCLUDE_DIRS} include/)
 
 project(main)
