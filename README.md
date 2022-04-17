@@ -8,15 +8,25 @@ Game in development
 
 **MAKE SURE YOU HAVE SDL INSTALLED!**
 
->1. Clone Repo
->
->2. mkdir build
->
->3. cd build
->
->4. cmake ..
->
->5. ./main
+```
+$ brew install sdl
+```
+or
+><a href="https://www.libsdl.org/download-2.0.php">SDL2 Wiki</a>
+
+If SDL is already installed
+```
+$ mkdir build
+```
+```
+$ cd build
+```
+```
+$ cmake ..
+```
+```
+$ ./main
+```
 
 ## How to Play
 
