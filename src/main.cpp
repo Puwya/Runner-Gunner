@@ -18,8 +18,8 @@ int main(int argc, char* argv[]) {
   // if initialized we run game loop
   if (initialized)
     gameLoop(vecTextures, renderer);
-
   // Deallocations
   deallocation(initialized, window, renderer);
   return 0;
 }
+// test
