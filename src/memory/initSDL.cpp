@@ -9,7 +9,4 @@ bool initSDL(SDL_Window* &window, SDL_Renderer* &renderer) {
   }
   std::cout << "SDL was not initialized!\n";
   return false;
-  // test
-  // test
-  // test
 }
