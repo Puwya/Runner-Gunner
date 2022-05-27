@@ -1,3 +1,4 @@
 /build
 /.vscode
+/include/libs
 /src/lib/glad.c
