@@ -1,4 +1,3 @@
 /build
 /.vscode
-/include/libs
-/src/lib/glad.c
+design.md
