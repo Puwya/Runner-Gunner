@@ -6,27 +6,7 @@ Game in development
 
 ## How to install
 
-**MAKE SURE YOU HAVE SDL INSTALLED!**
-
-```
-$ brew install sdl
-```
-or
-><a href="https://www.libsdl.org/download-2.0.php">SDL2 Wiki</a>
-
-If SDL is already installed
-```
-$ mkdir build
-```
-```
-$ cd build
-```
-```
-$ cmake ..
-```
-```
-$ ./main
-```
+# - In progress of switching to raylib
 
 ## How to Play
 
