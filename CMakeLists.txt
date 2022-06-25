@@ -15,7 +15,9 @@ include_directories(main PUBLIC include)
 #                src/functions/leftMV.cpp src/functions/space.cpp)
 add_executable(${PROJECT_NAME} src/main.cpp src/memory/initRaylib.cpp
                src/memory/initRect.cpp src/memory/initTextures.cpp
-               src/memory/deallocation.cpp src/handlers/handleLoop.cpp)
+               src/memory/deallocation.cpp src/handlers/gameLoop.cpp 
+               src/handlers/logic.cpp src/handlers/handleClouds.cpp
+               src/updateRenderer.cpp)
 
 find_library(raylib raylib PATHS lib)
 include_directories(${PROJECT_NAME} PUBLIC include/raylib)

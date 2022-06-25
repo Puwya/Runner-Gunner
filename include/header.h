@@ -15,6 +15,7 @@ struct TextureContainer {
   std::string m_Name;
   Texture2D m_Texture;
 };
+
 struct RectangleContainer {
  public:
   RectangleContainer(Rectangle rec, Vector2 pos)
@@ -29,13 +30,12 @@ enum Dir {
 
 bool initRaylib();
 void deallocation();
-// void handleEvent(const SDL_Event &event, bool &gameOver, SDL_Renderer* &renderer, 
-//                  std::vector<textures> &vecTextures);
+void logic(std::vector<TextureContainer> &textures);
 void initTextures(std::vector<TextureContainer> &textures);
 void initRect(std::vector<RectangleContainer> &rectangles);
-// void handleClouds(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
+void handleClouds(std::vector<RectangleContainer> &rectangles);
 void gameLoop(std::vector<TextureContainer> &textures, std::vector<RectangleContainer> &rectangles);
-// void updateRenderer(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
+void updateRenderer(std::vector<TextureContainer> &textures, std::vector<RectangleContainer> &rectangles);
 // void rightSpace(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
 // void leftSpace(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
 // void rightMV(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
