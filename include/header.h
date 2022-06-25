@@ -8,14 +8,6 @@
 // Dependencies
 #include "raylib/raylib.h"
 
-struct TextureContainer {
- public:
-  TextureContainer(Texture2D texture, std::string &name)
-      : m_Texture(texture), m_Name(name) {}
-  std::string m_Name;
-  Texture2D m_Texture;
-};
-
 struct RectangleContainer {
  public:
   RectangleContainer(Rectangle rec, Vector2 pos)
@@ -30,12 +22,12 @@ enum Dir {
 
 bool initRaylib();
 void deallocation();
-void logic(std::vector<TextureContainer> &textures);
-void initTextures(std::vector<TextureContainer> &textures);
+void logic(std::vector<Texture2D> &textures);
+void initTextures(std::vector<Texture2D> &textures);
 void initRect(std::vector<RectangleContainer> &rectangles);
 void handleClouds(std::vector<RectangleContainer> &rectangles);
-void gameLoop(std::vector<TextureContainer> &textures, std::vector<RectangleContainer> &rectangles);
-void updateRenderer(std::vector<TextureContainer> &textures, std::vector<RectangleContainer> &rectangles);
+void gameLoop(std::vector<Texture2D> &textures, std::vector<RectangleContainer> &rectangles);
+void updateRenderer(std::vector<Texture2D> &textures, std::vector<RectangleContainer> &rectangles);
 // void rightSpace(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
 // void leftSpace(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
 // void rightMV(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);

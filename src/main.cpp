@@ -4,7 +4,7 @@ Dir dir = Right;
 
 int main(int argc, char* argv[]) {
   const bool RAYLIB_INITIALIZED = initRaylib();
-  std::vector<TextureContainer> textures;
+  std::vector<Texture2D> textures;
   std::vector<RectangleContainer> rectangles;
   // if initialized we run game loop
   if (RAYLIB_INITIALIZED) {

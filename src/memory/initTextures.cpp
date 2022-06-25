@@ -1,6 +1,6 @@
 #include "../../include/header.h"
 
-void initTextures(std::vector<TextureContainer> &textures) {
+void initTextures(std::vector<Texture2D> &textures) {
   std::string texture_load[6] {"../assets/BackGround.png", "../assets/clouds.png", 
                                "../assets/clouds1.png", "../assets/sky.png", 
                                "../assets/spriteL.png", "../assets/spriteR.png"};
@@ -12,8 +12,7 @@ void initTextures(std::vector<TextureContainer> &textures) {
     // Using string copy to copy current string into a char *
     strcpy(cstr, texture_load[i].c_str());
     // TODO
-    TextureContainer texture(LoadTexture(cstr), texture_load[i]);
-    textures.push_back(texture);
+    textures.push_back(LoadTexture(cstr));
 
     delete []cstr;
   }

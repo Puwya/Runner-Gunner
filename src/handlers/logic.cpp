@@ -1,6 +1,6 @@
 #include "../../include/header.h"
 
-void logic(std::vector<TextureContainer> &textures) {
+void logic(std::vector<Texture2D> &textures) {
   if (IsKeyDown(KEY_SPACE) && IsKeyDown(KEY_RIGHT)) {
     std::cout << "RIGHT AND SPACE\n";
     // rightSpace(textures, renderer);
