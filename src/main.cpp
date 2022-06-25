@@ -7,9 +7,10 @@ int main(int argc, char* argv[]) {
   // if initialized we run game loop
   if (RAYLIB_INITIALIZED) {
     std::vector<TextureContainer> textures;
+    std::vector<RectangleContainer> rectangles;
     initTextures(textures);
-    initRect(vecTextures);
-    gameLoop(vecTextures, renderer);
+    initRect(rectangles);
+    gameLoop(textures, rectangles);
   }
   // Deallocations
   if (RAYLIB_INITIALIZED)

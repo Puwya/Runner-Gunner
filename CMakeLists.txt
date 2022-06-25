@@ -13,7 +13,9 @@ include_directories(main PUBLIC include)
 #                src/updateRenderer.cpp src/functions/rightSpace.cpp
 #                src/functions/leftSpace.cpp src/functions/rightMV.cpp
 #                src/functions/leftMV.cpp src/functions/space.cpp)
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp src/memory/initRaylib.cpp
+               src/memory/initRect.cpp src/memory/initTextures.cpp
+               src/memory/deallocation.cpp src/handlers/handleLoop.cpp)
 
 find_library(raylib raylib PATHS lib)
 include_directories(${PROJECT_NAME} PUBLIC include/raylib)
