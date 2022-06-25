@@ -1,9 +1,9 @@
 #include "../../include/header.h"
 
 void initTextures(std::vector<TextureContainer> &textures) {
-  std::string texture_load[6] {"../assets/BackGround.bmp", "../assets/clouds.bmp", 
-                               "../assets/clouds1.bmp", "../assets/sky.bmp", 
-                               "../assets/spriteL.bmp", "../assets/spriteR.bmp"};
+  std::string texture_load[6] {"../assets/BackGround.png", "../assets/clouds.png", 
+                               "../assets/clouds1.png", "../assets/sky.png", 
+                               "../assets/spriteL.png", "../assets/spriteR.png"};
   // This loop iterates through the amount of textures program needs
   for (int i = 0; i < 6; i++) {
     // Creating C String on the heap and declaring size to be current texture 
