@@ -5,26 +5,26 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
-// SDL 2 Library & Dependencies
-#include <SDL.h>
-#include "libs/glad.h"
+// Dependencies
+#include "raylib/raylib.h"
 
-struct textures {
-  std::string texture_name;
-  SDL_Texture* texture;
-  SDL_Rect* rect;
+struct TextureContainer {
+ public:
+  TextureContainer(Texture2D texture, std::string &name)
+      : m_Texture(texture), m_Name(name) {}
+  std::string m_Name;
+  Texture2D m_Texture;
 };
 enum Dir {
   Right = 0,
   Left
 };
 
-bool initSDL(SDL_Window* &window, SDL_Renderer* &renderer);
-void deallocation(SDL_Window* &window, SDL_Renderer* &renderer);
-void deallocation(bool initialized, SDL_Window* &window, SDL_Renderer* &renderer);
+bool initRaylib();
+void deallocation();
 void handleEvent(const SDL_Event &event, bool &gameOver, SDL_Renderer* &renderer, 
                  std::vector<textures> &vecTextures);
-void initTextures(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
+void initTextures(std::vector<TextureContainer> &textures);
 void initRect(std::vector<textures> &vecTextures);
 void handleClouds(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
 void gameLoop(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
@@ -35,7 +35,6 @@ void rightMV(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
 void leftMV(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
 void space(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
 
-extern std::string texture_load[];
 extern Dir dir;
 
 #endif // HEADER_H_

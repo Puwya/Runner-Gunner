@@ -1,12 +1,12 @@
 #include "../../include/header.h"
 
-bool initSDL(SDL_Window* &window, SDL_Renderer* &renderer) {
-  if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) == 0) {
-    SDL_CreateWindowAndRenderer(640, 480, SDL_RENDERER_ACCELERATED, 
-                                &window, &renderer);
-    std::cout << "SDL initialized\n";
+bool initRaylib() {
+  InitWindow(640, 480, "Gunner Runner");
+  if (IsWindowReady()) {
+    SetWindowState(FLAG_VSYNC_HINT);
+    std::cout << "Raylib initialized\n";
     return true;
   }
-  std::cout << "SDL was not initialized!\n";
+  std::cout << "Raylib was not initialized!\n";
   return false;
 }

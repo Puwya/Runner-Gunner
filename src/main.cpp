@@ -1,25 +1,18 @@
 #include "../include/header.h"
 
-std::string texture_load[6] {"../assets/BackGround.bmp", "../assets/clouds.bmp", 
-                             "../assets/clouds1.bmp", "../assets/sky.bmp", 
-                             "../assets/spriteL.bmp", "../assets/spriteR.bmp"};
 Dir dir = Right;
 
 int main(int argc, char* argv[]) {
-  SDL_Window* window = nullptr;
-  SDL_Renderer* renderer = nullptr;
-  // Initialize window and renderer
-  bool initialized = initSDL(window, renderer);
-
-  std::vector<textures> vecTextures;
-  initTextures(vecTextures, renderer);
-  initRect(vecTextures);
-
+  const bool RAYLIB_INITIALIZED = initRaylib();
   // if initialized we run game loop
-  if (initialized)
+  if (RAYLIB_INITIALIZED) {
+    std::vector<TextureContainer> textures;
+    initTextures(textures);
+    initRect(vecTextures);
     gameLoop(vecTextures, renderer);
+  }
   // Deallocations
-  deallocation(initialized, window, renderer);
+  if (RAYLIB_INITIALIZED)
+    deallocation();
   return 0;
 }
-// test

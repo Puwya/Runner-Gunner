@@ -5,18 +5,19 @@ set(CMAKE_BUILD_TYPE Debug)
 
 project(main)
 
-include_directories(${PROJECT_NAME} PUBLIC include)
-add_executable(main src/main.cpp src/libs/glad.c src/memory/initSDL.cpp 
-               src/memory/deallocation.cpp src/handlers/handleLoop.cpp 
-               src/handlers/handleEvents.cpp src/memory/initTextures.cpp
-               src/memory/initRect.cpp src/handlers/handleClouds.cpp 
-               src/updateRenderer.cpp src/functions/rightSpace.cpp
-               src/functions/leftSpace.cpp src/functions/rightMV.cpp
-               src/functions/leftMV.cpp src/functions/space.cpp)
+include_directories(main PUBLIC include)
+# add_executable(main src/main.cpp src/libs/glad.c src/memory/initSDL.cpp 
+#                src/memory/deallocation.cpp src/handlers/handleLoop.cpp 
+#                src/handlers/handleEvents.cpp src/memory/initTextures.cpp
+#                src/memory/initRect.cpp src/handlers/handleClouds.cpp 
+#                src/updateRenderer.cpp src/functions/rightSpace.cpp
+#                src/functions/leftSpace.cpp src/functions/rightMV.cpp
+#                src/functions/leftMV.cpp src/functions/space.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp)
 
 find_library(raylib raylib PATHS lib)
 include_directories(${PROJECT_NAME} PUBLIC include/raylib)
-target_link_libraries(${PROJECT_NAME} PUBLIC ${raylib})
+target_link_libraries(${PROJECT_NAME} ${raylib})
 
 # Checks if OSX and links appropriate frameworks (only required on MacOS)
 if (APPLE)
