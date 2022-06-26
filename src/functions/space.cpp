@@ -1,6 +1,6 @@
 #include "../../include/header.h"
 
-void space(std::vector<textures> &vecTextures, SDL_Renderer* &renderer) {
+void space(std::vector<backgroundTextures> &vecTextures, SDL_Renderer* &renderer) {
   for (int i = 0; i < 48; i++) {
     vecTextures[4].rect->y--;
     updateRenderer(vecTextures, renderer);

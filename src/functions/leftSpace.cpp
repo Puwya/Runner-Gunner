@@ -1,6 +1,6 @@
 #include "../../include/header.h"
 
-void leftSpace(std::vector<textures> &vecTextures, SDL_Renderer* &renderer) {
+void leftSpace(std::vector<backgroundTextures> &vecTextures, SDL_Renderer* &renderer) {
   static int i = 1;
   if (i == 1) {
     for (int i = 0; i < 48; i++) {

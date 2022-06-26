@@ -22,17 +22,17 @@ enum Dir {
 
 bool initRaylib();
 void deallocation();
-void logic(std::vector<Texture2D> &textures, std::vector<RectangleContainer> &rectangles);
-void initTextures(std::vector<Texture2D> &textures);
+void logic(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles);
+void initTextures(std::vector<Texture2D> &backgroundTextures);
 void initRect(std::vector<RectangleContainer> &rectangles);
 void handleClouds(std::vector<RectangleContainer> &rectangles);
-void gameLoop(std::vector<Texture2D> &textures, std::vector<RectangleContainer> &rectangles);
-void updateRenderer(std::vector<Texture2D> &textures, std::vector<RectangleContainer> &rectangles);
-void rightMV(std::vector<Texture2D> &textures, std::vector<RectangleContainer> &rectangles);
-void leftMV(std::vector<Texture2D> &textures, std::vector<RectangleContainer> &rectangles);
-// void rightSpace(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
-// void leftSpace(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
-// void space(std::vector<textures> &vecTextures, SDL_Renderer* &renderer);
+void gameLoop(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles);
+void updateRenderer(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles);
+void rightMV(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles);
+void leftMV(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles);
+// void rightSpace(std::vector<backgroundTextures> &vecTextures, SDL_Renderer* &renderer);
+// void leftSpace(std::vector<backgroundTextures> &vecTextures, SDL_Renderer* &renderer);
+// void space(std::vector<backgroundTextures> &vecTextures, SDL_Renderer* &renderer);
 
 extern Dir dir;
 
