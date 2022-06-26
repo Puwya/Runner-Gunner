@@ -35,3 +35,4 @@
 /build
 /.vscode
 design.md
+*.DS_Store
