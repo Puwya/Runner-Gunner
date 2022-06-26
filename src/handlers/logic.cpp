@@ -6,20 +6,17 @@ bool isKeyDownAndStateIdle(int KeyPressed, WarriorState state) {
 }
 
 void logic(Warrior &warrior) {
-  if (IsKeyDown(KEY_SPACE) && isKeyDownAndStateIdle(KEY_RIGHT, warrior.getState())) {
-    std::cout << "RIGHT AND SPACE\n";
+  if (IsKeyDown(KEY_SPACE) && isKeyDownAndStateIdle(KEY_RIGHT,
+                                                    warrior.getState())) {
     warrior.setState(RightJump);
-  }else if (IsKeyDown(KEY_SPACE) && isKeyDownAndStateIdle(KEY_LEFT, warrior.getState())) {
-    std::cout << "LEFT AND SPACE\n";
+  }else if (IsKeyDown(KEY_SPACE) && isKeyDownAndStateIdle(KEY_LEFT,
+                                                          warrior.getState())) {
     warrior.setState(LeftJump);
   }else if (isKeyDownAndStateIdle(KEY_RIGHT, warrior.getState())) {
-    std::cout << "RIGHT\n";
     warrior.MoveRight();
   }else if (isKeyDownAndStateIdle(KEY_LEFT, warrior.getState())) {
-    std::cout << "LEFT\n";
     warrior.MoveLeft();
   }else if (isKeyDownAndStateIdle(KEY_SPACE, warrior.getState())) {
-    std::cout << "SPACE\n";
     warrior.setState(Jumping);
   }
   switch (warrior.getState()) {

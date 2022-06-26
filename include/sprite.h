@@ -13,7 +13,8 @@ class I_Sprite {
   Vector2 m_Pos;
 };
 
-enum WarriorState { Idle = 0, Jumping, Falling, RightJump, LeftJump, RightFall, LeftFall};
+enum WarriorState { Idle = 0, Jumping, Falling, RightJump, LeftJump, RightFall,
+                    LeftFall };
 class Warrior : public I_Sprite {
  public:
   Warrior(Texture2D sprite, Rectangle rect, Vector2 pos, WarriorState state);
