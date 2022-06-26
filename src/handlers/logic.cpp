@@ -6,11 +6,9 @@ bool isKeyDownAndStateIdle(int KeyPressed, WarriorState state) {
 }
 
 void logic(Warrior &warrior) {
-  if (IsKeyDown(KEY_SPACE) && isKeyDownAndStateIdle(KEY_RIGHT,
-                                                    warrior.getState())) {
+  if (IsKeyDown(KEY_SPACE) && isKeyDownAndStateIdle(KEY_RIGHT, warrior.getState())) {
     warrior.setState(RightJump);
-  }else if (IsKeyDown(KEY_SPACE) && isKeyDownAndStateIdle(KEY_LEFT,
-                                                          warrior.getState())) {
+  }else if (IsKeyDown(KEY_SPACE) && isKeyDownAndStateIdle(KEY_LEFT, warrior.getState())) {
     warrior.setState(LeftJump);
   }else if (isKeyDownAndStateIdle(KEY_RIGHT, warrior.getState())) {
     warrior.MoveRight();

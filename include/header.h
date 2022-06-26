@@ -23,14 +23,7 @@ void logic(Warrior &warrior);
 void initTextures(std::vector<Texture2D> &backgroundTextures);
 void initRect(std::vector<RectangleContainer> &rectangles);
 void handleClouds(std::vector<RectangleContainer> &rectangles);
-
-void gameLoop(std::vector<Texture2D> &backgroundTextures,
-              std::vector<RectangleContainer> &rectangles, Warrior &warrior);
-
-void updateRenderer(std::vector<Texture2D> &backgroundTextures,
-                    std::vector<RectangleContainer> &rectangles, Warrior &warrior);
-
-void space(std::vector<Texture2D> &backgroundTextures,
-           std::vector<RectangleContainer> &rectangles);
+void gameLoop(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles, Warrior &warrior);
+void updateRenderer(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles, Warrior &warrior);
 
 #endif // HEADER_H_
