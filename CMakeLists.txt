@@ -6,19 +6,11 @@ set(CMAKE_BUILD_TYPE Debug)
 project(main)
 
 include_directories(main PUBLIC include)
-# add_executable(main src/main.cpp src/libs/glad.c src/memory/initSDL.cpp 
-#                src/memory/deallocation.cpp src/handlers/handleLoop.cpp 
-#                src/handlers/handleEvents.cpp src/memory/initTextures.cpp
-#                src/memory/initRect.cpp src/handlers/handleClouds.cpp 
-#                src/updateRenderer.cpp src/functions/rightSpace.cpp
-#                src/functions/leftSpace.cpp src/functions/rightMV.cpp
-#                src/functions/leftMV.cpp src/functions/space.cpp)
 add_executable(${PROJECT_NAME} src/main.cpp src/memory/initRaylib.cpp
                src/memory/initRect.cpp src/memory/initTextures.cpp
                src/memory/deallocation.cpp src/handlers/gameLoop.cpp 
                src/handlers/logic.cpp src/handlers/handleClouds.cpp
-               src/updateRenderer.cpp src/functions/space.cpp
-               src/sprite.cpp)
+               src/updateRenderer.cpp src/sprite.cpp)
 
 find_library(raylib raylib PATHS lib)
 include_directories(${PROJECT_NAME} PUBLIC include/raylib)

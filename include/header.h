@@ -26,7 +26,5 @@ void handleClouds(std::vector<RectangleContainer> &rectangles);
 void gameLoop(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles, Warrior &warrior);
 void updateRenderer(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles, Warrior &warrior);
 void space(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles);
-// void rightSpace(std::vector<backgroundTextures> &vecTextures, SDL_Renderer* &renderer);
-// void leftSpace(std::vector<backgroundTextures> &vecTextures, SDL_Renderer* &renderer);
 
 #endif // HEADER_H_

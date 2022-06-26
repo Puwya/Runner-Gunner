@@ -13,7 +13,7 @@ class I_Sprite {
   Vector2 m_Pos;
 };
 
-enum WarriorState { Idle = 0, Jumping, Falling};
+enum WarriorState { Idle = 0, Jumping, Falling, RightJump, LeftJump, RightFall, LeftFall};
 class Warrior : public I_Sprite {
  public:
   Warrior(Texture2D sprite, Rectangle rect, Vector2 pos, WarriorState state);
@@ -21,9 +21,14 @@ class Warrior : public I_Sprite {
   virtual void Draw() override;
   void MoveLeft();
   void MoveRight();
-  void Jump();
-  void RightSpaceAction();
-  void LeftSpaceAction();
+  void Jumping();
+  void Falling();
+  void RightJump();
+  void LeftJump();
+  void RightFall();
+  void LeftFall();
+  WarriorState getState() const;
+  void setState(WarriorState state);
  private:
   WarriorState m_state;
 };
