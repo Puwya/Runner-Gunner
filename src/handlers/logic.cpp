@@ -9,12 +9,12 @@ void logic(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleCont
     // leftSpace(backgroundTextures, renderer);
   }else if (IsKeyDown(KEY_RIGHT)) {
     std::cout << "RIGHT\n";
-    rightMV(backgroundTextures, rectangles);
+    // rightMV(backgroundTextures, rectangles);
   }else if (IsKeyDown(KEY_LEFT)) {
     std::cout << "LEFT\n";
-    leftMV(backgroundTextures, rectangles);
+    // leftMV(backgroundTextures, rectangles);
   }else if (IsKeyDown(KEY_SPACE)) {
     std::cout << "SPACE\n";
-    // space(backgroundTextures, renderer);
+    // space(backgroundTextures, rectangles);
   }
 }
