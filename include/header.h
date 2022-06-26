@@ -19,7 +19,7 @@ struct RectangleContainer {
 
 bool initRaylib();
 void deallocation();
-void logic(std::vector<Texture2D> &backgroundTextures, std::vector<RectangleContainer> &rectangles);
+void logic(Warrior &warrior);
 void initTextures(std::vector<Texture2D> &backgroundTextures);
 void initRect(std::vector<RectangleContainer> &rectangles);
 void handleClouds(std::vector<RectangleContainer> &rectangles);

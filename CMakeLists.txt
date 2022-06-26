@@ -17,8 +17,7 @@ add_executable(${PROJECT_NAME} src/main.cpp src/memory/initRaylib.cpp
                src/memory/initRect.cpp src/memory/initTextures.cpp
                src/memory/deallocation.cpp src/handlers/gameLoop.cpp 
                src/handlers/logic.cpp src/handlers/handleClouds.cpp
-               src/updateRenderer.cpp src/functions/rightMV.cpp
-               src/functions/leftMV.cpp src/functions/space.cpp
+               src/updateRenderer.cpp src/functions/space.cpp
                src/sprite.cpp)
 
 find_library(raylib raylib PATHS lib)
