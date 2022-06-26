@@ -11,9 +11,8 @@ int main(int argc, char* argv[]) {
     initTextures(backgroundTextures);
     initRect(rectangles);
     gameLoop(backgroundTextures, rectangles, warrior);
-  }
-  // Deallocations
-  if (RAYLIB_INITIALIZED)
+    // Deallocations
     deallocation();
+  }
   return 0;
 }
