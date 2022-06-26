@@ -4,7 +4,7 @@ void gameLoop(std::vector<Texture2D> &textures, std::vector<RectangleContainer> 
   while (!WindowShouldClose()) {
     BeginDrawing();
       ClearBackground(RAYWHITE);
-      logic(textures);
+      logic(textures, rectangles);
       updateRenderer(textures, rectangles);
     EndDrawing();
   }

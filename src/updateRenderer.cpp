@@ -9,6 +9,6 @@ void updateRenderer(std::vector<Texture2D> &textures, std::vector<RectangleConta
   if (dir == Left) {
     DrawTextureRec(textures[4], rectangles[4].m_Rec, rectangles[4].m_Pos, RAYWHITE);
   }else {
-    DrawTextureRec(textures[5], rectangles[5].m_Rec, rectangles[5].m_Pos, RAYWHITE);
+    DrawTextureRec(textures[5], rectangles[4].m_Rec, rectangles[4].m_Pos, RAYWHITE);
   }
 }

@@ -1,14 +1,11 @@
 #include "../../include/header.h"
 
-void leftMV(std::vector<textures> &vecTextures, SDL_Renderer* &renderer) {
+void leftMV(std::vector<Texture2D> &textures, std::vector<RectangleContainer> &rectangles) {
   dir = Left;
-  updateRenderer(vecTextures, renderer);
-  if (vecTextures[4].rect->x >= 8) {
-    for (int i = 0; i < 12; i++){
-      vecTextures[4].rect->x--;
-      if (vecTextures[4].rect->x < 8)
-        vecTextures[4].rect->x = 8;
-      updateRenderer(vecTextures, renderer);
-    }
+  updateRenderer(textures, rectangles);
+  if (rectangles[4].m_Pos.x >= 8) {
+    rectangles[4].m_Pos.x--;
+    if (rectangles[4].m_Pos.x < 8)
+      rectangles[4].m_Pos.x = 8;
   }
 }

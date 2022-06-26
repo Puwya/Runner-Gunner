@@ -1,10 +1,10 @@
 #include "../../include/header.h"
 
-void rightSpace(std::vector<textures> &vecTextures, SDL_Renderer* &renderer) {
+void rightSpace(std::vector<RectangleContainer> &rectangles) {
   static int i = 1;
   if (i == 1) {
     for (int i = 0; i < 48; i++) {
-      vecTextures[4].rect->y--;
+      rectangles[4].m_Rec.y--;
       vecTextures[4].rect->x++;
       if (vecTextures[4].rect->x > 570)
         vecTextures[4].rect->x = 570;

@@ -1,14 +1,11 @@
 #include "../../include/header.h"
 
-void rightMV(std::vector<textures> &vecTextures, SDL_Renderer* &renderer) {
+void rightMV(std::vector<Texture2D> &textures, std::vector<RectangleContainer> &rectangles) {
   dir = Right;
-  updateRenderer(vecTextures, renderer);
-  if (vecTextures[4].rect->x <= 570) {
-    for (int i = 0; i < 12; i++){
-      vecTextures[4].rect->x++;
-      if (vecTextures[4].rect->x > 570)
-        vecTextures[4].rect->x = 570;
-      updateRenderer(vecTextures, renderer);
-    }
+  updateRenderer(textures, rectangles);
+  if (rectangles[4].m_Pos.x <= 570) {
+    rectangles[4].m_Pos.x++;
+    if (rectangles[4].m_Pos.x > 570)
+      rectangles[4].m_Pos.x = 570;
   }
 }
