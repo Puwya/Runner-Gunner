@@ -30,3 +30,5 @@
 /.vscode
 design.md
 *.DS_Store
+*/raylib
+*libraylib.a
