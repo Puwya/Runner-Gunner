@@ -5,9 +5,15 @@ git clone https://github.com/raysan5/raylib.git
 cd raylib/src
 make
 cd src
-mv libraylib.a ../../
-mkdir ../../../include/raylib
-mv raudio.h raylib.h raymath.h rlgl.h ../../../include/raylib
+if [[ "$OSTYPE" =~ ^msys ]]; then
+  move libraylib.a ../../
+  mkdir ../../../include/raylib
+  move raudio.h raylib.h raymath.h rlgl.h ../../../include/raylib
+else
+  mv libraylib.a ../../
+  mkdir ../../../include/raylib
+  mv raudio.h raylib.h raymath.h rlgl.h ../../../include/raylib
+fi
 
 cd ../../../
 mkdir build
