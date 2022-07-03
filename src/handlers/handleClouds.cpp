@@ -12,6 +12,6 @@ void handleClouds(std::vector<RectangleContainer> &rectangles) {
       rectangles[2].m_Pos.x = 640;
     }
     counter = 0;
-  }else
+  } else
     counter++;
 }
