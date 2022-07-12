@@ -3,7 +3,7 @@
 cd lib
 git clone https://github.com/raysan5/raylib.git
 cd raylib/src
-make
+make PLATFORM=PLATFORM_DESKTOP
 cd src
 if [[ "$OSTYPE" =~ ^msys ]]; then
   move libraylib.a ../../
